@@ -41,12 +41,17 @@ model.add(Dropout(0.5))
 model.add(Dense(2, init='uniform'))
 model.add(Activation('softmax'))
 sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
+
+model.summary()
+
 model.compile(loss='categorical_crossentropy',
-              optimizer=sgd)
+              optimizer=sgd,
+			  metrics=['accuracy'])
               
 ## training and evalutation
 model.fit(X_train, y_train,
           nb_epoch=20,
           batch_size=100)
 score = model.evaluate(X_test, y_test, verbose=0)
-print "loss = " + str(score)
+print 'Test score:', score[0]
+print 'Test accuracy:', score[1]
