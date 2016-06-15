@@ -33,8 +33,20 @@ print(X_train.shape[0], 'train samples')
 print(X_test.shape[0], 'test samples')
 
 # convert class vectors to binary class matrices
+'''
+[7 2 1 ..., 4 5 6] -> to_categorical()
+[[ 0.  0.  0. ...,  1.  0.  0.]
+ [ 0.  0.  1. ...,  0.  0.  0.]
+ [ 0.  1.  0. ...,  0.  0.  0.]
+ ...,
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]
+ [ 0.  0.  0. ...,  0.  0.  0.]]
+'''
 Y_train = np_utils.to_categorical(y_train, nb_classes)
+print(y_test)
 Y_test = np_utils.to_categorical(y_test, nb_classes)
+print(Y_test)
 
 model = Sequential()
 model.add(Dense(512, input_shape=(784,)))
