@@ -75,8 +75,7 @@ rmsprop = RMSprop(lr=learning_rate)
 model.compile(loss='categorical_crossentropy', optimizer=rmsprop)
 
 model.fit(X_train, Y_train, batch_size=batch_size, nb_epoch=nb_epochs,
-          show_accuracy=True, verbose=1, validation_data=(X_test, Y_test))
+          verbose=1, validation_data=(X_test, Y_test))
 
-scores = model.evaluate(X_test, Y_test, show_accuracy=True, verbose=0)
-print('LSTM test score:', scores[0])
-print('LSTM test accuracy:', scores[1])
+scores = model.evaluate(X_test, Y_test, verbose=0)
+print('loss:', score)

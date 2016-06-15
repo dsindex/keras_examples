@@ -51,7 +51,6 @@ model.add(Activation('softmax'))
 
 model.compile(loss='categorical_crossentropy', optimizer='adam')
 
-history = model.fit(X_train, Y_train, nb_epoch=nb_epoch, batch_size=batch_size, verbose=1, show_accuracy=True, validation_split=0.1)
-score = model.evaluate(X_test, Y_test, batch_size=batch_size, verbose=1, show_accuracy=True)
-print('Test score:', score[0])
-print('Test accuracy:', score[1])
+history = model.fit(X_train, Y_train, nb_epoch=nb_epoch, batch_size=batch_size, verbose=1, validation_split=0.1)
+score = model.evaluate(X_test, Y_test, batch_size=batch_size, verbose=0)
+print('loss:',score)

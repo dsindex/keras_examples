@@ -2,7 +2,8 @@ keras
 ===
 
 - description
-  - test code for keras
+  - test code for [keras](http://keras.io/) with tensorflow backend
+  - [guide to keras sequential model](http://keras.io/getting-started/sequential-model-guide/)
 
 - set backend to tensorflow
 ```
