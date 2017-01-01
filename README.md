@@ -14,17 +14,17 @@ $ cat keras.json
 {"epsilon": 1e-07, "floatx": "float32", "backend": "tensorflow"}
 ```
 
-- test code
+- mlp
 ```
 mlp.py
+reuters_mlp.py
 ```
 
-- mnist
+- cnn
 ```
 mnist_cnn.py  mnist_irnn.py  mnist_mlp.py
 ```
 
-- reuters
-```
-reuters_mlp.py
-```
+- lstm
+  - https://github.com/jaungiers/LSTM-Neural-Network-for-Time-Series-Prediction
+
